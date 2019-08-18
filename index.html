@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+</head>
+
+<body>
+    <h1>動物の鳴き声</h1>
+    <h2>クリックすると、鳴き声がクリップボードにコピーされます</h2>
+    <table>
+        <tr>
+            <th>###</th>
+            <th>動物</th>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="にゃん" data-tippy-content="にゃん">
+            <td>1</td>
+            <td><img src="img/cat.png"></td>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="わん" data-tippy-content="わん">
+            <td>2</td>
+            <td><img src="img/dog.png"></td>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="……" data-tippy-content="……">
+            <td>3</td>
+            <td><img src="img/rabbit.png"></td>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="モォ〜〜" data-tippy-content="モォ〜〜">
+            <td>4</td>
+            <td><img src="img/cow.png"></td>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="ケロケロ" data-tippy-content="ケロケロ">
+            <td>5</td>
+            <td><img src="img/frog.png"></td>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="……" data-tippy-content="……">
+            <td>6</td>
+            <td><img src="img/snake.png"></td>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="モォ〜" data-tippy-content="モォ〜">
+            <td>7</td>
+            <td><img src="img/giraffe.png"></td>
+        </tr>
+        <tr class="copy-value" data-clipboard-text="メェ〜" data-tippy-content="メェ〜">
+            <td>8</td>
+            <td><img src="img/sheep.png"></td>
+        </tr>
+    </table>
+</body>
+
+<script type="text/javascript">
+    var Clipboard = new ClipboardJS('.copy-value');
+
+    tippy('.copy-value', {
+        trigger: 'click',
+        placement: 'right',
+        animation: 'scale',
+        arrow: 'true',
+        duration: [300, 100],
+    });
+</script>
+
+</html>
